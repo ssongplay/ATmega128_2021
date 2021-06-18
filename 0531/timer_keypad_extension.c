@@ -42,10 +42,10 @@ interrupt [TIM2_COMP] void timer2_cmp(void)
     // 키패드 읽는 부분
     keypadColData = (PINC & 0x0F);
     switch(keypadColData){
-    case 0x01 : KEYPAD_Code = (KEYPAD_SEL_rowindex)*4 + 0; break; // 0번 col의 스위치가 눌린 경우
-    case 0x02 : KEYPAD_Code = (KEYPAD_SEL_rowindex)*4 + 1; break; // 1번 col의 스위치가 눌린 경우
-    case 0x04 : KEYPAD_Code = (KEYPAD_SEL_rowindex)*4 + 2; break; // 2번 col의 스위치가 눌린 경우
-    case 0x08 : KEYPAD_Code = (KEYPAD_SEL_rowindex)*4 + 3; break; // 3번 col의 스위치가 눌린 경우
+    case 0x01 : KEYPAD_Code = (KEYPAD_SEL_rowIndex)*4 + 0; break; // 0번 col의 스위치가 눌린 경우
+    case 0x02 : KEYPAD_Code = (KEYPAD_SEL_rowIndex)*4 + 1; break; // 1번 col의 스위치가 눌린 경우
+    case 0x04 : KEYPAD_Code = (KEYPAD_SEL_rowIndex)*4 + 2; break; // 2번 col의 스위치가 눌린 경우
+    case 0x08 : KEYPAD_Code = (KEYPAD_SEL_rowIndex)*4 + 3; break; // 3번 col의 스위치가 눌린 경우
     }
     
     KEYPAD_SEL_rowindex++;
